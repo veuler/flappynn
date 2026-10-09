@@ -1,0 +1,8 @@
+# Keep source text consistent across checkouts.
+* text=auto eol=lf
+
+# Model contracts validate SHA-256 over raw bytes. Preserve exported bundles
+# exactly; automatic line-ending conversion would invalidate their hashes.
+/artifacts/model-*.json -text
+/src/models/** -text
+/tests/fixtures/speed-model* -text

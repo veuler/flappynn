@@ -1,0 +1,44 @@
+# Root allowlist for the public source-available tree.
+# Everything at the repository root is ignored first. Only the paths
+# re-included below are part of the public tree. Notes, docs, data,
+# screenshots, reports, logs, checkpoints, and local environments stay local.
+
+/*
+!/.gitignore
+!/.gitattributes
+!/README.md
+!/LICENSE
+!/package.json
+!/requirements.txt
+!/scripts/
+!/src/
+!/tests/
+!/artifacts/
+
+# Dependencies, virtual environments, Python caches, secrets, logs, editor state.
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+*.log
+.codex/
+.agents/
+/tests/browser/generated/
+
+# Training history and retired bundles inside otherwise published directories.
+/src/learning*/
+/src/models/rl-516/
+/src/models/rl-616/normal/
+/src/model.css
+/src/model.meta.json
+/src/models/hard/
+
+# Publish five weight files from artifacts. Ignore every other child.
+/artifacts/*
+!/artifacts/model-516.json
+!/artifacts/model-516-hard.json
+!/artifacts/model-616.json
+!/artifacts/model-616-hard.json
+!/artifacts/model-rl-616-hard.json

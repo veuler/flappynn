@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS / Python — Model parity test</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./parity.css">
+  <link rel="stylesheet" href="./generated/model.css">
+  <script type="module" src="./parity.js"></script>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">NEURAL FLAPPY / FAZ 05–06</p>
+    <h1>One network. Two calculation paths.</h1>
+    <p class="intro">Compare Python reference states with browser CSS calculations; JavaScript only carries inputs and measures differences.</p>
+    <div class="toolbar"><button id="run" type="button">Run the parity test</button><span id="status" role="status">Ready</span></div>
+    <p id="model-kind" class="notice"></p>
+    <div class="metrics"><div><span>STATES</span><strong id="case-count">—</strong></div><div><span>MAX OUTPUT ERROR</span><strong id="max-error">—</strong></div><div><span>TARGET TOLERANCE</span><strong>&lt; 1e-4</strong></div></div>
+    <p id="summary">This test checks native exp(), ReLU, and registered numeric properties together.</p>
+    <div class="model-info"><span>Model SHA-256</span><code id="model-sha">—</code><span>Browser</span><code id="browser">—</code></div>
+    <details><summary>Detailed report</summary><pre id="report-json"></pre></details>
+    <div class="footer-actions"><button id="download" type="button" disabled>Download report</button><a href="http://127.0.0.1:3030/" target="_blank" rel="noopener">Game page ↗</a></div>
+    <p class="footnote">This test verifies numeric parity, not gameplay skill or human-data quality; run it again for each new model.</p>
+    <div id="ai-output" class="css-neural-model" aria-hidden="true"></div>
+  </main>
+</body>
+</html>

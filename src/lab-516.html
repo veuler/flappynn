@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1115">
+  <title>Neural Flappy — 5 → 16 → 1 Lab</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./js/main.js"></script>
+</head>
+<body data-model-profile="speed-516">
+  <div class="page">
+    <header class="header">
+      <a class="brand" href="./" aria-label="Neural Flappy home"><span class="brand-icon">↗</span> neural<span class="brand-light">flappy</span><span class="brand-dot">.</span></a>
+      <nav class="model-tabs" aria-label="Model labs"><a href="./lab-516.html" aria-current="page">5 → 16 → 1 Lab</a><a href="./lab-616.html">6 → 16 → 1 Lab</a></nav>
+    </header>
+    <main>
+      <div class="intro">
+        <div><h1>5 → 16 → 1 Lab</h1><p class="eyebrow">PLAY. TEACH. WATCH.</p><p class="subtitle">An independent speed-aware model with its own weights, training and recordings.</p></div>
+        <span class="phase"><span></span> DECISIONS MADE IN CSS</span>
+      </div>
+      <div class="workspace">
+        <section class="play-section" aria-label="Flappy game">
+          <div class="game-toolbar"><span class="human-mode"><span></span> <span id="mode-label">HUMAN MODE</span></span><span id="status" data-state="ready">READY</span></div>
+          <div class="canvas-shell">
+            <canvas id="game" width="480" height="640" tabindex="0" aria-label="Jump with Space, Up, W, or a tap; pause with P.">This game requires a browser with Canvas support.</canvas>
+            <div id="overlay" class="overlay"><div class="overlay-card"><span class="overlay-mark" aria-hidden="true">↗</span><h2 id="overlay-title">Ready for takeoff?</h2><p id="overlay-text">Fly through the gaps and earn a point for each pipe.</p><span id="overlay-hint">SPACE or tap → start</span></div></div>
+            <span class="canvas-caption" aria-hidden="true">FLIGHT / 01</span>
+          </div>
+          <div class="game-footer"><span><kbd>SPACE</kbd> <span id="jump-hint">jump</span></span><span><kbd>P</kbd> pause</span><span class="touch-hint">↗ tap to play</span></div>
+        </section>
+        <section id="brain-panel" class="brain-panel" aria-label="Neural activity and decisions">
+          <div class="panel-heading"><span class="section-kicker">LIVE NEURAL NETWORK</span><span class="tag">5 → 16 → 1</span></div>
+          <div class="brain-output"><div><span>Jump score</span><strong id="brain-probability">—</strong></div><div class="decision-tile"><span>Last decision</span><strong id="brain-decision">READY</strong></div></div>
+          <div class="decision-totals" aria-label="Total AI decisions this flight"><span class="decision-scope">THIS FLIGHT</span><div class="jump-total"><span><i></i> Jump</span><strong id="brain-jump-count">0</strong></div><div class="wait-total"><span><i></i> Wait</span><strong id="brain-wait-count">0</strong></div></div>
+          <div class="neural-stage">
+            <div class="neural-stage-header"><span><i></i> SIGNAL ACTIVITY</span><span>5 inputs · 16 neurons · 1 decision</span></div>
+            <canvas id="brain-network" width="880" height="848" role="img" aria-label="Five inputs, sixteen neurons, and one output; light shows neuron activity."></canvas>
+            <div class="neural-stage-footer"><span id="network-status">WAITING FOR SIGNAL</span></div>
+          </div>
+          <div class="network-legend"><span><i class="input-dot"></i>Inputs</span><span><i class="hidden-dot"></i>Neurons</span><span><i class="output-dot"></i>Decision</span></div>
+          <p class="network-caption">Electrical flashes highlight active neurons; brightness shows activity, not connection weight.</p>
+          <div class="activation-heading"><span>NEURON ACTIVITY</span><span>LIVE VALUES</span></div>
+          <div class="neuron-grid">
+            <div><span>H1</span><i class="neuron-track"><i id="neuron-bar-1"></i></i><code id="neuron-value-1">—</code></div>
+            <div><span>H2</span><i class="neuron-track"><i id="neuron-bar-2"></i></i><code id="neuron-value-2">—</code></div>
+            <div><span>H3</span><i class="neuron-track"><i id="neuron-bar-3"></i></i><code id="neuron-value-3">—</code></div>
+            <div><span>H4</span><i class="neuron-track"><i id="neuron-bar-4"></i></i><code id="neuron-value-4">—</code></div>
+            <div><span>H5</span><i class="neuron-track"><i id="neuron-bar-5"></i></i><code id="neuron-value-5">—</code></div>
+            <div><span>H6</span><i class="neuron-track"><i id="neuron-bar-6"></i></i><code id="neuron-value-6">—</code></div>
+            <div><span>H7</span><i class="neuron-track"><i id="neuron-bar-7"></i></i><code id="neuron-value-7">—</code></div>
+            <div><span>H8</span><i class="neuron-track"><i id="neuron-bar-8"></i></i><code id="neuron-value-8">—</code></div>
+          </div>
+          <div class="neuron-grid"><div><span>H9</span><i class="neuron-track"><i id="neuron-bar-9"></i></i><code id="neuron-value-9">—</code></div>
+<div><span>H10</span><i class="neuron-track"><i id="neuron-bar-10"></i></i><code id="neuron-value-10">—</code></div>
+<div><span>H11</span><i class="neuron-track"><i id="neuron-bar-11"></i></i><code id="neuron-value-11">—</code></div>
+<div><span>H12</span><i class="neuron-track"><i id="neuron-bar-12"></i></i><code id="neuron-value-12">—</code></div>
+<div><span>H13</span><i class="neuron-track"><i id="neuron-bar-13"></i></i><code id="neuron-value-13">—</code></div>
+<div><span>H14</span><i class="neuron-track"><i id="neuron-bar-14"></i></i><code id="neuron-value-14">—</code></div>
+<div><span>H15</span><i class="neuron-track"><i id="neuron-bar-15"></i></i><code id="neuron-value-15">—</code></div>
+<div><span>H16</span><i class="neuron-track"><i id="neuron-bar-16"></i></i><code id="neuron-value-16">—</code></div></div><p class="brain-note">Higher activity fills the bar; values of 4 or more fill it completely.</p>
+          <div class="brain-telemetry"><span>Decision count <b id="brain-cycles">0</b></span><details><summary>Calculation details</summary><span>Network output before conversion to a percentage: <b id="brain-logit">—</b></span></details></div>
+        </section>
+        <section class="panel flight-panel" aria-label="Flight metrics and controls">
+          <div class="panel-heading"><div><span class="section-kicker">COCKPIT / 03</span><h2>Flight metrics<span class="heading-dot">.</span></h2></div><span class="live-dot" aria-hidden="true"></span></div>
+          <div class="score-grid"><div><span class="metric-label">SCORE</span><strong id="score">0</strong><span class="metric-unit">pipes cleared</span></div><div><span class="metric-label">BEST FLIGHT</span><strong id="best-score">0</strong><span class="metric-unit">this difficulty · session</span></div></div>
+          <div class="time-row"><span>Flight time</span><span id="time">0.0 s</span></div>
+          <div class="time-row speed-row"><span>Forward speed <b id="difficulty-label" class="difficulty-tag">NORMAL</b></span><span id="flight-speed">180.0 px/s</span></div>
+          <div class="flight-controls">
+            <label for="mode">Who is flying?</label><select id="mode"><option value="human">Me · free flight</option><option value="training">Me · record my inputs</option><option id="ai-option" value="ai" disabled>AI · fly with the model</option></select>
+            <label for="difficulty">Difficulty</label><select id="difficulty"><option value="normal">Normal · steady pace</option><option value="hard">Hard · accelerating flight</option></select>
+            <p id="difficulty-note" class="seed-note">Normal mode keeps a steady speed of 180 px/s.</p>
+            <p id="hard-model-note" class="storage-note" hidden>This model was trained in normal mode; its hard-mode performance has not been measured.</p>
+            <p id="model-status" class="model-status" role="status">Preparing the model…</p><button id="start" class="primary" type="button">Start flying</button>
+            <div class="run-actions"><button id="pause" class="secondary" type="button" disabled>Pause</button><button id="finish" class="secondary" type="button" disabled>End flight</button></div>
+          </div>
+          <div class="threshold-control"><div class="threshold-row"><label for="threshold">Jump threshold</label><output id="threshold-value" for="threshold">0.50</output></div><input id="threshold" type="range" min="0.01" max="0.99" step="0.01" value="0.5" disabled><div class="range-endpoints"><span>More often</span><span>Less often</span></div><p class="seed-note">The AI requests a jump when its jump score reaches this threshold.</p></div>
+          <a class="benchmark-link flight-benchmark" href="./benchmark.html?profile=speed-516" target="_blank" rel="noopener"><span>Benchmark 20 normal courses</span><span>↗</span></a>
+        </section>
+      </div>
+      <div class="support-heading"><span>BEHIND THE FLIGHT</span><span>TRAINING & SETTINGS</span></div>
+      <div class="support-panels">
+        <section class="panel self-learning-panel">
+          <div class="panel-heading"><div><span class="section-kicker">IMPROVE / 01</span><h2>Self-learning</h2></div><span class="tag">CPU</span></div>
+          <p class="panel-description">Train only this 5 → 16 → 1 model; its normal and hard weights are separate.</p>
+          <label for="self-train-difficulty">Training difficulty</label><select id="self-train-difficulty"><option value="normal">Normal · steady pace</option><option value="hard">Hard · accelerating flight</option></select>
+          <label for="self-train-duration">Training time</label><select id="self-train-duration"><option value="300">5 minutes · first session</option><option value="600">10 minutes</option><option value="900">15 minutes</option></select>
+          <button id="self-train-start" class="primary" type="button" disabled>Start training</button><button id="self-train-stop" class="secondary" type="button" hidden>Stop and check the result</button>
+          <progress id="self-train-progress" max="1" value="0" aria-label="Self-learning progress"></progress>
+          <div id="self-compare" class="comparison-progress" hidden><div class="comparison-heading"><span>20 courses × 2 models</span><strong id="self-compare-count">0 / 40</strong></div><progress id="self-compare-progress" max="40" value="0" aria-label="Completed model comparison runs"></progress><p id="self-compare-stage" class="comparison-stage">Preparing the comparison.</p><p id="self-compare-location" class="seed-note" hidden></p></div>
+          <p id="self-train-status" class="learning-status" role="status">Start with a 5-minute session.</p><p id="self-train-details" class="seed-note">Starts with the saved model and selected threshold.</p>
+          <p id="self-train-score-summary" class="seed-note" hidden></p>
+          <details id="self-train-error" class="learning-error" hidden><summary>Error details</summary><p id="self-train-error-detail" class="storage-note"></p></details>
+          <button id="self-train-load" class="secondary" type="button" hidden>Load the new model</button><button id="self-train-retry" class="secondary" type="button" hidden>Retry validation</button>
+          <button id="self-train-try" class="secondary" type="button" hidden>Try without waiting for comparison</button><button id="self-train-restore" class="secondary" type="button" hidden>Return to the saved model</button><p id="self-train-trial-note" class="seed-note" hidden></p>
+          <button id="self-train-promote" class="primary" type="button" hidden>Use candidate permanently</button><p id="self-train-promote-note" class="seed-note" hidden>Saves this candidate for its training difficulty, including any course regressions; the previous model is backed up.</p>
+          <a id="self-train-report" class="benchmark-link" href="#" target="_blank" rel="noopener" hidden>Training report ↗</a>
+          <p id="self-train-policy-note" class="seed-note">Auto-save needs a 5% higher average, no lower median, P10 within 10%, and at most one severe course regression; manual saving remains available after comparison.</p>
+        </section>
+        <section class="panel training-panel">
+          <div class="panel-heading"><div><span class="section-kicker">TEACH / 02</span><h2>Your recordings</h2></div><span id="recording-status" class="tag">RECORDING OFF</span></div>
+          <div class="dataset-total"><strong id="sample-count">0</strong><span>samples / <span id="session-count">0</span> flights</span></div><div class="dataset-classes"><span>Jump <b id="jump-count">0</b></span><span>Wait <b id="wait-count">0</b></span></div>
+          <p id="recording-difficulties" class="storage-note">Flights · Normal 0 · Hard 0</p>
+          <p class="panel-description">Recording mode captures your inputs 20 times a second and keeps them across flights.</p>
+          <button id="export" class="primary" type="button" disabled>Download JSON</button><button id="clear" class="secondary" type="button" disabled>Clear recordings</button>
+          <label>Training start<select id="human-train-initialization"><option value="saved">Continue saved weights</option><option value="random">Reset: random weights</option></select></label>
+          <p id="human-initialization-note" class="storage-note">Continues the saved model using your recordings.</p>
+          <button id="human-train" class="primary" type="button" disabled>Train from my recordings</button>
+          <button id="import-recordings" class="secondary" type="button">Import recording JSON</button><input id="recording-file" type="file" accept=".json,application/json" hidden>
+          <p id="human-train-note" class="storage-note">Uses the selected flight difficulty and stops when validation stops improving; record at least two seeds.</p><p id="recording-import-status" class="storage-note" role="status"></p>
+          <div id="clear-confirmation" class="clear-confirmation" hidden><p>All recorded flight data will be deleted.</p><button id="confirm-clear" class="secondary" type="button">Yes, clear</button><button id="cancel-clear" class="secondary" type="button">Cancel</button></div>
+          <p class="storage-note">Download your recordings before closing or refreshing the page.</p><p id="capacity-note" class="storage-note" hidden>The 100,000-sample limit is reached; download and clear your recordings to continue.</p>
+        </section>
+        <section class="panel seed-panel">
+          <div class="panel-heading"><div><span class="section-kicker">EXPLORE / 03</span><h2>Pipe sequence</h2></div><span class="tag">COURSE</span></div>
+          <p class="panel-description">The seed determines pipe order; the same seed creates the same course.</p>
+          <label for="sequence">Next flight</label><select id="sequence"><option value="seeded">Repeat the same course</option><option value="random" selected>Choose a random course</option></select>
+          <div class="seed-row"><label for="seed">Seed</label><input id="seed" type="number" disabled min="0" max="4294967295" step="1" value="12345" inputmode="numeric"></div>
+          <div class="active-seed"><span>CURRENT COURSE</span><strong id="active-seed">12345</strong></div><p class="seed-note">This choice applies to the next flight.</p>
+        </section>
+        <section class="panel state-panel">
+          <div class="panel-heading"><div><span class="section-kicker">UNDERSTAND / 04</span><h2>What does the AI see?</h2></div><span class="tag">5 INPUTS</span></div>
+          <p class="panel-description">The AI also sees forward speed as its fifth input.</p>
+          <details open><summary>Model inputs</summary><dl class="state-values normalized-values"><div><dt>Bird height <small>0…1</small></dt><dd id="norm-bird-y">—</dd></div><div><dt>Vertical speed <small>−1…1</small></dt><dd id="norm-velocity">—</dd></div><div><dt>Pipe distance <small>0…1</small></dt><dd id="norm-distance">—</dd></div><div><dt>Gap position <small>0…1</small></dt><dd id="norm-gap-y">—</dd></div><div><dt>Forward speed <small>0…1</small></dt><dd id="norm-pipe-speed">—</dd></div></dl></details>
+          <details><summary>Raw game measurements</summary><dl class="state-values"><div><dt>Bird height</dt><dd id="bird-y">—</dd></div><div><dt>Vertical speed</dt><dd id="velocity">—</dd></div><div><dt>Pipe distance</dt><dd id="distance">—</dd></div><div><dt>Gap position</dt><dd id="gap-y">—</dd></div></dl></details>
+          <p id="state-error" class="storage-note" role="alert" hidden></p>
+        </section>
+      </div>
+    </main>
+    <footer class="page-footer"><span>One leap. One decision. A little further.</span><a class="footer-source" href="https://github.com/veuler/flappynn" target="_blank" rel="noopener noreferrer" aria-label="View the project on GitHub">View source on GitHub ↗</a></footer>
+  </div>
+  <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+  <div id="ai-output" class="css-neural-model" aria-hidden="true"></div>
+</body>
+</html>

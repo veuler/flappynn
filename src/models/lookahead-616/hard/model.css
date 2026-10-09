@@ -1,0 +1,160 @@
+/* Generated offline. Model SHA-256: f097111b8a8d6b50792135fc9d4c3aea081c7eed2264a89f0be94ce1d884fc0f */
+/* All weighted sums, ReLU and sigmoid are evaluated by CSS. */
+@property --nn-probe {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --output-z {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --jump-probability {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h1 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h2 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h3 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h4 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h5 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h6 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h7 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h8 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h9 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h10 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h11 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h12 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h13 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h14 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h15 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+@property --h16 {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.css-neural-model {
+  --bird-y: 0;
+  --velocity-y: 0;
+  --pipe-distance: 0;
+  --gap-y: 0;
+  --pipe-speed: 0;
+  --following-gap-y: 0;
+  --nn-probe: calc(1 / (1 + exp(-1)));
+  --h1-z: calc(var(--bird-y) * (-0.00010996393393725157) + var(--velocity-y) * (-4.855917359236628e-05) + var(--pipe-distance) * (-5.743332803831436e-05) + var(--gap-y) * (-0.0002024416608037427) + var(--pipe-speed) * (-0.00020929973106831312) + var(--following-gap-y) * (8.212101238314062e-05) + (6.384173320839182e-05));
+  --h1: max(0, var(--h1-z));
+  --h2-z: calc(var(--bird-y) * (-0.002307852264493704) + var(--velocity-y) * (0.0006241683149710298) + var(--pipe-distance) * (-4.268401607987471e-05) + var(--gap-y) * (-0.002008668379858136) + var(--pipe-speed) * (-0.002558190142735839) + var(--following-gap-y) * (-3.802684659603983e-05) + (-0.003136211074888706));
+  --h2: max(0, var(--h2-z));
+  --h3-z: calc(var(--bird-y) * (-2.1268835067749023) + var(--velocity-y) * (-1.1381433010101318) + var(--pipe-distance) * (-1.0581547021865845) + var(--gap-y) * (2.206385850906372) + var(--pipe-speed) * (0.571094274520874) + var(--following-gap-y) * (0.03683008626103401) + (0.07522965222597122));
+  --h3: max(0, var(--h3-z));
+  --h4-z: calc(var(--bird-y) * (2.0296967029571533) + var(--velocity-y) * (0.28174957633018494) + var(--pipe-distance) * (0.6443601250648499) + var(--gap-y) * (-0.9372050166130066) + var(--pipe-speed) * (-0.15316300094127655) + var(--following-gap-y) * (-0.0039940569549798965) + (-0.10948699712753296));
+  --h4: max(0, var(--h4-z));
+  --h5-z: calc(var(--bird-y) * (-2.7152061462402344) + var(--velocity-y) * (0.4368440806865692) + var(--pipe-distance) * (-1.2535429000854492) + var(--gap-y) * (2.029384136199951) + var(--pipe-speed) * (-0.015371276065707207) + var(--following-gap-y) * (-0.020216630771756172) + (0.4742606282234192));
+  --h5: max(0, var(--h5-z));
+  --h6-z: calc(var(--bird-y) * (-2.2191710472106934) + var(--velocity-y) * (-0.27630263566970825) + var(--pipe-distance) * (-0.5675069689750671) + var(--gap-y) * (1.4722682237625122) + var(--pipe-speed) * (0.5930188894271851) + var(--following-gap-y) * (0.018790392205119133) + (0.4252578318119049));
+  --h6: max(0, var(--h6-z));
+  --h7-z: calc(var(--bird-y) * (-2.2520627975463867) + var(--velocity-y) * (0.33169618248939514) + var(--pipe-distance) * (-0.9470310807228088) + var(--gap-y) * (2.314709186553955) + var(--pipe-speed) * (0.11473885178565979) + var(--following-gap-y) * (0.000967908650636673) + (0.1537715047597885));
+  --h7: max(0, var(--h7-z));
+  --h8-z: calc(var(--bird-y) * (0.32671090960502625) + var(--velocity-y) * (-6.214094161987305) + var(--pipe-distance) * (0.7117835283279419) + var(--gap-y) * (0.7849565744400024) + var(--pipe-speed) * (0.057410452514886856) + var(--following-gap-y) * (0.04474686086177826) + (-1.3189061880111694));
+  --h8: max(0, var(--h8-z));
+  --h9-z: calc(var(--bird-y) * (2.0207693576812744) + var(--velocity-y) * (-0.14058704674243927) + var(--pipe-distance) * (-4.187003135681152) + var(--gap-y) * (-2.460540771484375) + var(--pipe-speed) * (0.576773464679718) + var(--following-gap-y) * (-0.007588463369756937) + (0.4995446801185608));
+  --h9: max(0, var(--h9-z));
+  --h10-z: calc(var(--bird-y) * (-0.006483614444732666) + var(--velocity-y) * (-0.05443049967288971) + var(--pipe-distance) * (-0.002252951730042696) + var(--gap-y) * (-0.010180845856666565) + var(--pipe-speed) * (0.010943160392343998) + var(--following-gap-y) * (0.009379936382174492) + (0.015530063770711422));
+  --h10: max(0, var(--h10-z));
+  --h11-z: calc(var(--bird-y) * (0.008157843723893166) + var(--velocity-y) * (0.09529333561658859) + var(--pipe-distance) * (0.008162846788764) + var(--gap-y) * (-0.003540427889674902) + var(--pipe-speed) * (0.0047523039393126965) + var(--following-gap-y) * (0.015498853288590908) + (0.014873845502734184));
+  --h11: max(0, var(--h11-z));
+  --h12-z: calc(var(--bird-y) * (-0.0012588539393618703) + var(--velocity-y) * (-0.001920027774758637) + var(--pipe-distance) * (-7.114394247764722e-05) + var(--gap-y) * (-0.0012375280493870378) + var(--pipe-speed) * (-0.001936349319294095) + var(--following-gap-y) * (-0.0005203115870244801) + (-0.0016765114851295948));
+  --h12: max(0, var(--h12-z));
+  --h13-z: calc(var(--bird-y) * (0.007801475003361702) + var(--velocity-y) * (-0.1063816174864769) + var(--pipe-distance) * (0.058186743408441544) + var(--gap-y) * (0.027217019349336624) + var(--pipe-speed) * (-0.0622321255505085) + var(--following-gap-y) * (-0.007423836272209883) + (-0.00960498582571745));
+  --h13: max(0, var(--h13-z));
+  --h14-z: calc(var(--bird-y) * (-0.006459411233663559) + var(--velocity-y) * (-0.06602068245410919) + var(--pipe-distance) * (0.0029540935065597296) + var(--gap-y) * (-0.010389885865151882) + var(--pipe-speed) * (0.016007209196686745) + var(--following-gap-y) * (0.00911499559879303) + (0.01428490225225687));
+  --h14: max(0, var(--h14-z));
+  --h15-z: calc(var(--bird-y) * (-0.00782407633960247) + var(--velocity-y) * (-0.05904073268175125) + var(--pipe-distance) * (0.00223287264816463) + var(--gap-y) * (-0.00942806713283062) + var(--pipe-speed) * (0.015094742178916931) + var(--following-gap-y) * (0.010682708583772182) + (0.011525916866958141));
+  --h15: max(0, var(--h15-z));
+  --h16-z: calc(var(--bird-y) * (1.8606436252593994) + var(--velocity-y) * (0.8561195731163025) + var(--pipe-distance) * (-1.08762788772583) + var(--gap-y) * (-1.7420326471328735) + var(--pipe-speed) * (0.18073539435863495) + var(--following-gap-y) * (0.006502721458673477) + (-0.02827172912657261));
+  --h16: max(0, var(--h16-z));
+  --output-z-raw: calc(max(0, var(--h1-z)) * (-2.1754864064860158e-05) + max(0, var(--h2-z)) * (5.548020453716163e-06) + max(0, var(--h3-z)) * (-4.389095306396484) + max(0, var(--h4-z)) * (0.9285011887550354) + max(0, var(--h5-z)) * (-4.5997538566589355) + max(0, var(--h6-z)) * (-2.0869903564453125) + max(0, var(--h7-z)) * (-3.868239641189575) + max(0, var(--h8-z)) * (-6.176558017730713) + max(0, var(--h9-z)) * (4.984281063079834) + max(0, var(--h10-z)) * (-0.045473501086235046) + max(0, var(--h11-z)) * (0.032826006412506104) + max(0, var(--h12-z)) * (0.001989595126360655) + max(0, var(--h13-z)) * (0.004860823042690754) + max(0, var(--h14-z)) * (-0.043625686317682266) + max(0, var(--h15-z)) * (-0.038300711661577225) + max(0, var(--h16-z)) * (1.5439215898513794) + (-0.00707025732845068));
+  --output-z: var(--output-z-raw);
+  --jump-probability: calc(1 / (1 + exp(-1 * var(--output-z-raw))));
+}

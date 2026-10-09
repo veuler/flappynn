@@ -1,0 +1,16 @@
+{
+  "name": "css-neural-flappy",
+  "version": "0.1.0",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "start:parity": "node scripts/serve-parity.js",
+    "test": "node --test tests/game.test.js tests/training.test.js tests/ai.test.js tests/learning-service.test.js tests/profiles.test.js tests/promotion-policy.test.js tests/rl-service.test.js tests/replay-pool.test.js",
+    "test:ml": "node tests/export_contract.js && .\\.venv\\Scripts\\python.exe -m unittest tests.test_ml tests.test_css tests.test_self_train tests.test_profiles tests.test_rl -v"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "modelSha256": "39b3d0131c34f1611296185a7a06986e90efb5c4595db33760ba3078c564c4ce",
+  "cssSha256": "f7989ebd70ea00e5170539d5ad95b7766d4fb895faf7ee4f9b3a8c34b2d0ffb6",
+  "architecture": [
+    5,
+    16,
+    1
+  ],
+  "inputNames": [
+    "birdY",
+    "velocityY",
+    "pipeDistance",
+    "gapY",
+    "pipeSpeed"
+  ],
+  "threshold": 0.5,
+  "normalization": {
+    "version": 2,
+    "height": 640,
+    "velocityScale": 1200,
+    "maxPipeDistance": 600,
+    "maxPipeSpeed": 270
+  },
+  "gameConfig": {
+    "width": 480,
+    "height": 640,
+    "birdX": 124,
+    "birdRadius": 14,
+    "initialBirdY": 300,
+    "gravity": 1500,
+    "jumpVelocity": -440,
+    "pipeSpeed": 180,
+    "pipeWidth": 76,
+    "pipeGap": 190,
+    "pipeSpacing": 280,
+    "firstPipeX": 600,
+    "gapMargin": 64,
+    "fixedStepSeconds": 0.008333333333333333,
+    "maxFrameSeconds": 0.1,
+    "decisionIntervalMs": 50,
+    "minimumJumpIntervalMs": 100,
+    "maxTrainingSamples": 100000
+  },
+  "sampleIntervalMs": 50,
+  "minimumJumpIntervalMs": 100,
+  "dataKind": "human-gameplay-unverified",
+  "trainingDifficulty": "hard",
+  "parityVerified": true,
+  "modelProfile": "speed-516",
+  "difficultyConfig": {
+    "speedGrowthPerPoint": 0.01,
+    "maxSpeedMultiplier": 1.5,
+    "speedResponseSeconds": 2
+  },
+  "parity": {
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+    "checkedAt": "2026-10-07T17:30:23.433Z",
+    "caseCount": 1560,
+    "tolerance": 0.0001,
+    "maximumProbabilityError": 6.027070530073564e-06,
+    "maximumLogitError": 5.329820144339692e-05,
+    "maximumHiddenError": 0.0,
+    "decisionMismatches": 0,
+    "nearThresholdCases": 0
+  }
+}

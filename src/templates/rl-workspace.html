@@ -1,0 +1,65 @@
+      <section class="rl-intro">
+        <div><p class="rl-kicker">LEARN BY PLAYING</p><h1>Learn with RL<span>.</span></h1><p>Train a 6 → 16 → 1 policy using the next two pipe gaps, watch the decisions it actually made, then validate the CSS model before saving it.</p></div>
+        <div class="rl-status-pill" id="job-pill" data-state="idle"><i></i><span id="job-state">NO TRAINING JOB</span></div>
+      </section>
+
+      <section class="rl-workspace" aria-label="RL training workspace">
+        <article class="rl-card rl-game-card">
+          <div class="rl-card-head"><div><span class="rl-overline">FLIGHT / REPLAY</span><h2 id="flight-title">Training episode</h2></div><span class="rl-chip" id="flight-source">WAITING</span></div>
+          <div class="rl-flight-scoreboard" aria-label="Displayed flight score"><div><span>SCORE</span><strong id="flight-score">0</strong></div><p>Pipes cleared in the flight you’re watching.</p></div>
+          <div class="rl-game-wrap">
+            <canvas id="game" width="480" height="640" aria-label="Recorded training flight" role="img"></canvas>
+            <div class="rl-game-overlay" id="game-overlay"><strong id="game-overlay-title">Ready to train</strong><span id="game-overlay-text">Start a job to watch real policy decisions.</span></div>
+          </div>
+          <div class="rl-playback"><div class="rl-progress"><span id="playback-progress"></span></div><div class="rl-playback-row"><span id="playback-time">Waiting for an episode</span><div><button id="playback-toggle" class="rl-button small" type="button" disabled>Pause replay</button><label>Playback <select id="playback-speed" aria-label="Replay playback speed"><option value="1">1×</option><option value="4">4×</option><option value="8">8×</option></select></label></div></div></div>
+          <p class="rl-source-note" id="source-note">Training replays show the policy version that generated each frame. They do not represent the newest weights.</p>
+          <div class="rl-demo-controls"><div><span class="rl-overline">SAVED CSS POLICY DEMO</span><span id="demo-status">Choose your saved Normal or Hard model to watch it fly without training.</span></div><div class="button-row"><select id="demo-difficulty" aria-label="Saved policy difficulty"><option value="normal">Normal policy</option><option value="hard">Hard policy</option></select><button id="demo-play" class="rl-button secondary" type="button" disabled>Play saved policy</button><button id="demo-pause" class="rl-button small" type="button" disabled>Pause</button><button id="demo-reset" class="rl-button small" type="button" disabled>Close demo</button></div></div>
+        </article>
+
+        <article class="rl-card rl-brain-card" aria-label="Neural policy activity">
+          <div class="rl-card-head"><div><span class="rl-overline">POLICY SNAPSHOT</span><h2>6 → 16 → 1 network</h2></div><span class="rl-chip" id="policy-version">NO FRAME</span></div>
+          <div class="rl-brain-summary"><div><span>Jump probability</span><strong id="jump-score">—</strong></div><div><span>Decision</span><strong id="decision">WAITING</strong></div></div>
+          <p class="rl-policy-note">Training samples jumps from the policy probability to explore. Saved CSS demos use their fixed 0.50 threshold deterministically.</p>
+          <div class="rl-decisions"><span><i class="jump-dot"></i> JUMP <b id="jump-count">0</b></span><span><i class="wait-dot"></i> WAIT <b id="wait-count">0</b></span></div>
+          <div class="rl-network"><div class="rl-network-label"><span>ACTIVATION</span><span id="network-status">WAITING FOR FRAME</span></div><canvas id="brain-network" width="880" height="848" role="img" aria-label="Six inputs, sixteen hidden neurons, one output. Brightness shows recorded activations."></canvas><div class="rl-network-foot"><span>6 INPUTS</span><span>16 NEURONS</span><span>1 OUTPUT</span></div></div>
+          <div class="rl-input-values"><div><span>Y</span><b id="input-0">—</b></div><div><span>VY</span><b id="input-1">—</b></div><div><span>DX</span><b id="input-2">—</b></div><div><span>GAP</span><b id="input-3">—</b></div><div><span>SPEED</span><b id="input-4">—</b></div><div><span>GAP 2</span><b id="input-5">—</b></div></div>
+          <div class="rl-activation-head"><span>HIDDEN NEURONS</span><small>RECORDED VALUE</small></div><div class="rl-neurons" id="neuron-grid"></div>
+          <p class="rl-footnote">Bars and network light use the exact activation values from this frame. Weight change is shown separately in training metrics.</p>
+        </article>
+
+        <article class="rl-card rl-metrics-peek">
+          <div class="rl-card-head"><div><span class="rl-overline">TRAINING / LIVE</span><h2>Job metrics</h2></div><span class="rl-chip" id="metric-version">—</span></div>
+          <div class="rl-job-progress"><div><span>Time budget</span><b id="job-elapsed">0:00 / 5:00</b></div><div class="rl-progress"><span id="job-progress"></span></div></div>
+          <div class="rl-quick-metrics"><div><span>Episodes</span><b id="metric-episodes">0</b></div><div><span>Total steps</span><b id="metric-steps">0</b></div><div><span>Mean score</span><b id="metric-score">—</b></div><div><span>Mean reward</span><b id="metric-reward">—</b></div><div><span>Entropy</span><b id="metric-entropy">—</b></div><div><span>Weight change</span><b id="metric-delta">—</b></div><div class="rl-best-score" title="Highest score across all completed training flights."><span>Best score</span><b id="metric-best-score">—</b></div></div>
+          <p class="rl-footnote">Values come from the training job. Weight change tracks policy updates; neuron activity is a separate measurement.</p>
+        </article>
+      </section>
+
+      <section class="rl-lower-grid" aria-label="Training configuration and policy saving">
+        <article class="rl-card rl-control-card">
+          <div class="rl-card-head"><div><span class="rl-overline">TRAIN / CONFIGURE</span><h2>Training run</h2></div><span class="rl-chip">CPU</span></div>
+          <div class="rl-training-layout">
+          <div class="rl-configuration">
+          <fieldset id="setup-fields" class="rl-fields">
+            <label>Difficulty<select id="difficulty"><option value="normal">Normal</option><option value="hard">Hard · accelerating</option></select></label>
+            <label>Training mode<select id="training-mode"><option value="fast">Fast · parallel rollouts</option><option value="live">Live · one environment</option></select></label>
+            <label id="env-field">Parallel environments<select id="num-envs"><option value="32">32 environments</option><option value="64">64 environments</option><option value="128">128 environments</option><option value="256">256 environments</option><option value="512">512 environments</option></select></label>
+            <label>Time budget<select id="duration"><option value="300">5 minutes</option><option value="600">10 minutes</option><option value="900">15 minutes</option><option value="1800">30 minutes</option></select></label>
+            <label>Initialize from<select id="initialization"><option value="random">Fresh random weights</option><option value="saved">Saved RL policy</option><option value="checkpoint">Latest checkpoint</option></select></label>
+          </fieldset>
+          <p class="rl-help" id="mode-help">Fast training runs parallel environments. Episodes appear as training replays from the policy version that produced them.</p>
+          <p class="rl-reward-note"><b>Reward</b> +1 for each pipe cleared, with a small survival bonus and a collision penalty.</p>
+          <div class="rl-actions"><button id="train-start" class="rl-button primary" type="button">Start training</button><button id="train-pause" class="rl-button secondary" type="button" disabled>Pause training</button><button id="train-stop" class="rl-button danger" type="button" disabled>Stop training</button></div>
+          <p id="api-status" class="rl-message" role="status" aria-live="polite">Checking the RL service…</p>
+          </div>
+          <section class="rl-validation" aria-label="Verify and save policy">
+          <div class="rl-card-head"><h3>Verify &amp; save policy</h3><span class="rl-chip" id="validation-badge">LOCKED</span></div>
+          <p id="validation-copy">A completed training run must pass browser parity before its CSS policy can be saved.</p>
+          <div class="rl-validation-actions"><button id="verify-css" class="rl-button secondary" type="button" disabled>Verify CSS policy</button><button id="save-policy" class="rl-button primary" type="button" disabled>Save policy</button></div>
+          <p class="rl-message" id="validation-status" role="status" aria-live="polite">Waiting for a completed candidate.</p>
+          <p class="rl-footnote">When training finishes, verify the policy, then save it to use in AI flight.</p>
+          <div class="rl-saved"><span class="rl-overline">SAVED POLICIES</span><p id="saved-status">Checking available policies…</p></div>
+          </section>
+          </div>
+        </article>
+      </section>

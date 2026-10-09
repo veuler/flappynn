@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Flappy — CSS AI benchmark</title>
+  <link rel="icon" href="data:,"><link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./js/benchmark.js"></script>
+</head>
+<body>
+  <main class="benchmark-page">
+    <p class="eyebrow">NEURAL FLAPPY / REAL CSS DECISIONS</p><h1>20 seeds. One model.</h1>
+    <p class="subtitle">The CSS network controls the bird; each accelerated run simulates up to 60 seconds of normal gameplay.</p>
+    <section class="panel"><label for="benchmark-threshold">Decision threshold</label><input id="benchmark-threshold" type="number" min="0.01" max="0.99" step="0.01" value="0.5"><button id="benchmark-run" class="primary" type="button" disabled>Run 20 flights</button><p id="benchmark-status" role="status">Checking the model…</p><div id="benchmark-results"></div><button id="benchmark-download" class="secondary" type="button" disabled>Download the result as JSON</button></section>
+    <p class="seed-note">Seeds 1–20; no training inputs are recorded, and repeated threshold tuning on these seeds is not an independent final test.</p>
+    <details><summary>Detailed report</summary><pre id="benchmark-report"></pre></details>
+    <div id="ai-output" class="css-neural-model" aria-hidden="true"></div>
+  </main>
+</body>
+</html>
