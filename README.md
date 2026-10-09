@@ -2,6 +2,14 @@
 
 A local Flappy Bird experiment that runs neural-network inference in [model.css](src/models/lookahead-616/model.css), which stores the exported weights and computes weighted sums, ReLU, and sigmoid. The bird’s physics run in JavaScript, while training runs in Python with CPU PyTorch.
 
+
+
+
+https://github.com/user-attachments/assets/cc129fd2-349e-4843-8361-89ea8381b56b
+
+
+
+
 Two labs share one local server:
 
 - **6 → 16 → 1 Lab** at [http://localhost:3030/](http://localhost:3030/) (`src/lab-616.html`). Human recording, action imitation, and PPO.
